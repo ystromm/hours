@@ -4,9 +4,17 @@ plugins {
 
 node {
     download = true
+    version = '4.2.3'
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.9'
 }
 
+task install(type: NpmTask) {
+    args = ['install']
+}
+
+task test(type: NpmTask, dependsOn: 'install') {
+    args = ['test']
+}

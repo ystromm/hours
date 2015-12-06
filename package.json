@@ -4,14 +4,16 @@
   "author": "Martin Carlsson <martin.ystrom@gmail.com>",
   "description": "A simple app with Protractor tests",
   "scripts": {
-    "test": "node_modules/.bin/protractor test/conf.js"
+    "test": "node_modules/.bin/protractor test/conf.js",
+    "update": "node_modules/.bin/webdriver-manager -update"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ystromm/hours"
   },
   "dependencies": {
-    "protractor": "2.1.0"
+    "protractor": "*",
+    "chromedriver": "*"
   },
   "license": "MIT"
 }
