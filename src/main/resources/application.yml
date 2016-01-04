@@ -1,23 +1,28 @@
-logging:
-  level:
-    ROOT: DEBUG
+#logging:
+#  level:
+#    ROOT: DEBUG
 security:
   oauth2:
+    # client:
+      # clientId: 1689490068001631
+      # clientSecret: ebce437e6421807057b647f24d166170
+      # accessTokenUri: https://graph.facebook.com/oauth/access_token
+      # userAuthorizationUri: https://www.facebook.com/dialog/oauth
+      # authenticationScheme: query
+      # clientAuthenticationScheme: form
+      # tokenName: oauth_token
+    # resource:
+      # userInfoUri: https://graph.facebook.com/me
+      # preferTokenInfo: false
+
     client:
-      clientId: 233668646673605
-      clientSecret: 33b17e044ee6a4fa383f46ec6e28ea1d
-      accessTokenUri: https://graph.facebook.com/oauth/access_token
-      userAuthorizationUri: https://www.facebook.com/dialog/oauth
-      # clientId: 809417833574-8tumv1us497f24hd12fi2anr1ug7bp6c.apps.googleusercontent.com
-      # clientSecret: RK3FQTQY0fHu1dG8cCJuP_jo
-      # accessTokenUri: https://www.googleapis.com/oauth2/v3/tokeninfo
-      # userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
-      tokenName: oauth_token
-      authenticationScheme: query
-      clientAuthenticationScheme: form
-      scope: profile email
+      clientId: 809417833574-8tumv1us497f24hd12fi2anr1ug7bp6c.apps.googleusercontent.com
+      clientSecret: RK3FQTQY0fHu1dG8cCJuP_jo
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+      accessTokenUri: https://www.googleapis.com/oauth2/v3/token
+      clientAuthenticationScheme: query
+      scope: profile
     resource:
-      userInfoUri: https://graph.facebook.com/me
-      # userInfoUri: https://www.googleapis.com/plus/v1/people/me
+      userInfoUri: https://www.googleapis.com/plus/v1/people/me
       preferTokenInfo: false
 
