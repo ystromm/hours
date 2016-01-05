@@ -1,6 +1,7 @@
 (function(){
 "use strict";
-angular.module("app", []).controller("home", function($http) {
+angular.module("app", [])
+  .controller("home", function($http) {
     var self = this;
     $http.get("/api/user").success(function(data) {
       self.user = data.userAuthentication.details.displayName;
@@ -18,5 +19,11 @@ angular.module("app", []).controller("home", function($http) {
         self.authenticated = false;
       });
     };
+  })
+  .controller("times", function($scope) {
+    $scope.times = [{checkin: 1, checkout: 2}];
+    $scope.checkin = function() {
+      $scope.times.push({checkin: Date.now(), checkout: null});
+    }
   });
 }());
