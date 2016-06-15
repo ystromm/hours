@@ -4,6 +4,8 @@ buildscript {
     }
 }
 
+// elm make --output src/main/resources/static/js/Main.js src/main/resources/static/elm/Main.elm
+
 plugins {
     id 'com.moowork.node' version '0.11'
 }
@@ -34,7 +36,7 @@ node {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.9'
+    gradleVersion = '2.14'
 }
 
 task install(type: NpmTask) {
