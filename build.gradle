@@ -4,8 +4,6 @@ buildscript {
     }
 }
 
-// elm make --output src/main/resources/static/js/Main.js src/main/resources/static/elm/Main.elm
-
 plugins {
     id 'com.moowork.node' version '0.11'
 }
@@ -33,6 +31,10 @@ dependencies {
 node {
     download = true
     version = '4.2.3'
+}
+
+task elm(type:Exec) {
+    commandLine "elm-make", "--output", "build/resources/main/static/js/Main.js", "src/main/resources/static/elm/Main.elm"
 }
 
 task wrapper(type: Wrapper) {
