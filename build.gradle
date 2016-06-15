@@ -33,9 +33,18 @@ node {
     version = '4.2.3'
 }
 
+
 task elm(type:Exec) {
+    inputs.file file("src/main/resources/static/elm/Main.elm")
+    outputs.file file("build/resources/main/static/js/Main.js")
+
     commandLine "elm-make", "--output", "build/resources/main/static/js/Main.js", "src/main/resources/static/elm/Main.elm"
 }
+
+build {
+    dependsOn elm
+}
+
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.14'
