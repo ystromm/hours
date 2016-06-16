@@ -41,7 +41,7 @@ task elm(type:Exec) {
     commandLine "elm-make", "--output", "build/resources/main/static/js/Main.js", "src/main/resources/static/elm/Main.elm"
 }
 
-build {
+assemble {
     dependsOn elm
 }
 

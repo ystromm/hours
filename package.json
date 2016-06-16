@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "protractor": "*",
-    "chromedriver": "*"
+    "chromedriver": "*",
+    "elm": "*"
   },
   "license": "MIT"
 }
