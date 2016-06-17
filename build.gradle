@@ -33,16 +33,15 @@ node {
     version = '4.2.3'
 }
 
-
-task elm(type:Exec) {
-    inputs.file file("src/main/resources/static/elm/Main.elm")
+task elmMake(type:Exec) {
+    inputs.files file("src/main/resources/static/elm/Main.elm"), file("elm-stuff")
     outputs.file file("build/resources/main/static/js/Main.js")
 
-    commandLine "elm-make", "--output", "build/resources/main/static/js/Main.js", "src/main/resources/static/elm/Main.elm"
+    commandLine "elm", "make", "--yes", "--output", "build/resources/main/static/js/Main.js", "src/main/resources/static/elm/Main.elm"
 }
 
 assemble {
-    dependsOn elm
+    dependsOn elmMake
 }
 
 
