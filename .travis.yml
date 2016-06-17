@@ -3,3 +3,5 @@ jdk:
   - oraclejdk8
 install:
   - npm install
+script:
+  - ./gradlew build
